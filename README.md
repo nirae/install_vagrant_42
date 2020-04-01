@@ -30,3 +30,16 @@ Where you wan't to install vagrant. This exemple do it in the home
 
     $> vagrant --version
 
+Enjoy!
+
+## Tips
+
+### Session full because of virtualbox images or vagrant boxes
+
+Do a symlink for the folders `~/.vagrant.d` and `~/VirtualBox VMs` in the `goinfre` or `sgoinfre`
+
+### Problems with the norminette ruby version
+
+Restore the system ruby version for the norminette
+
+    $> rvm use system
