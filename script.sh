@@ -9,7 +9,7 @@ fi
 
 rvm install 2.6
 
-if [ ! -e $HOME/.vagrant.d ]
+if [ [! -e $HOME/.vagrant.d] && vagrant --version]
 then
     git clone -b v2.2.7 https://github.com/hashicorp/vagrant.git && cd vagrant
     rvm use 2.6
@@ -17,4 +17,6 @@ then
     bundle --binstubs exec
     mkdir -p $HOME/.vagrant.d && echo "export VAGRANT_HOME=$HOME/.vagrant.d" >> ~/.zshrc && echo "alias vagrant=$HOME/vagrant/exec/vagrant" >> ~/.zshrc && source ~/.zshrc
     vagrant --version
+else
+    echo "vagrant already installed"
 fi
