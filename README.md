@@ -30,4 +30,3 @@ Where you wan't to install vagrant. This exemple do it in the home
 
     $> vagrant --version
 
-
